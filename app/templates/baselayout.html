@@ -1,0 +1,77 @@
+<!doctype html>
+<html class=has-navbar-fixed-top>
+  <head>
+    {% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    <title>{% block title %}{% endblock %} - Routesetting</title>
+    {% endblock %}
+  </head>
+  <body>
+      <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{{ url_for('main.index') }}">
+            <h1 class="is-family-serif is-size-5 has-text-weight-semibold">Routesetting</h1>
+          </a>
+
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-nav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="main-nav" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="{{ url_for('main.index') }}">
+                Index
+            </a>
+            <a class='navbar-item' href="{{ url_for('main.explore') }}">
+                Explore
+            </a>
+            {% if current_user.is_anonymous %}
+            <a class="navbar-item"href="{{ url_for('auth.login') }}">Login</a>
+            {% else %}
+            <a class="navbar-item" href="{{ url_for('main.user', username=current_user.username) }}">Profile</a>
+            <a class="navbar-item" href="{{ url_for('auth.logout') }}">Logout</a>
+            {% endif %}
+          </div>
+            <!--
+            <a class="navbar-item"  href="home">
+              Home
+            </a>
+
+
+            <a class="navbar-item" href="/places">
+              Places
+            </a>
+
+            <a class="navbar-item" href="about">
+              About
+            </a>
+        -->
+          </div>
+        </div>
+  </nav>
+  <div class="container is-family-monospace">
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-warning">
+                    <button class="delete"></button>
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {% endwith %}
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

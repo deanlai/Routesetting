@@ -1,0 +1,10 @@
+<tr>
+    <td>{{ problem.id }}</td>
+    <td><a href="/user/{{ problem.setter.username }}">{{ problem.setter.username }}</a></td>
+    <th>{{ problem.grade }}</th>
+    <td>{{ problem.color }}</td>
+    <td>{{ problem.risk }}</td>
+    <td>{{ problem.intensity }}</td>
+    <td>{{ problem.complexity }}</td>
+    <td>{{ moment(problem.timestamp).fromNow() }}</td>
+</tr>

@@ -1,0 +1,9 @@
+{% extends "baselayout.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    <h1>File Not Found</h1>
+    <p><a href="{{ url_for('main.index') }}">Back</a></p>
+{% endblock %}

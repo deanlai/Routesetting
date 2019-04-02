@@ -1,0 +1,104 @@
+2019-04-01 08:57:42,498 INFO: Routesetting Startup [in /Users/seanlai/Projects/Routesetting/app/__init__.py:46]
+2019-04-01 08:58:29,512 INFO: Routesetting Startup [in /Users/seanlai/Projects/Routesetting/app/__init__.py:46]
+2019-04-01 08:58:34,795 ERROR: Exception on /explore [GET] [in /Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/seanlai/Projects/Routesetting/app/routes.py", line 33, in explore
+    return render_template('idex.html', title='Explore', problems=problems)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: idex.html
+2019-04-01 09:04:40,828 INFO: Routesetting Startup [in /Users/seanlai/Projects/Routesetting/app/__init__.py:46]
+2019-04-01 09:04:47,568 ERROR: Exception on /explore [GET] [in /Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/seanlai/Projects/Routesetting/app/routes.py", line 33, in explore
+    return render_template('idex.html', title='Explore', problems=problems)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: idex.html
+2019-04-01 09:11:28,926 INFO: Routesetting Startup [in /Users/seanlai/Projects/Routesetting/app/__init__.py:46]
+2019-04-01 09:11:34,221 ERROR: Exception on /explore [GET] [in /Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/seanlai/Projects/Routesetting/app/routes.py", line 33, in explore
+    return render_template('idex.html', title='Explore', problems=problems)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/seanlai/.local/share/virtualenvs/Routesetting-X26ByPI0/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: idex.html
+2019-04-01 09:15:44,293 INFO: Routesetting Startup [in /Users/seanlai/Projects/Routesetting/app/__init__.py:46]

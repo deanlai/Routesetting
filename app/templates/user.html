@@ -1,0 +1,43 @@
+{% extends 'baselayout.html' %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container is-family-monospace">
+    <br>
+    <h1 class="title">Setter: {{ user.username }}.</h1>
+    {% if user.about_me %}
+        <h2 class='subtitle'>{{ user.about_me }}</h2>
+    {% endif %}
+    {% if user == current_user %}
+        <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
+    {% elif not current_user.is_following(user) %}
+        <p><a href="{{ url_for('main.follow', username=user.username) }}">Follow</a></p>
+    {% else %}
+        <p><a href="{{ url_for('main.unfollow', username=user.username) }}">Unfollow</a></p>
+    {% endif %}
+    <br>
+    <table class=table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Setter</th>
+                <th>Grade</th>
+                <th>Color</th>
+                <th>Risk</th>
+                <th>Tntensity</th>
+                <th>Complexity</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for problem in problems %}
+             {% include '_problem.html' %}
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

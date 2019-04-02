@@ -1,8 +1,74 @@
-<html>
-    <head>
-        <title>{{ title }} - Microblog</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-    </body>
-</html>
+{% extends "baselayout.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    <br>
+    <h1 class='title'>Hi, {{current_user.username}}!</h1>
+    {% if form %}
+    <h2 class='subtitle'>Record a problem.</h2>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="box">
+            <div class="columns">
+                <div class="column">
+                    <h3 class='is-size-7'>{{ form.grade.label }}</h3>
+                    <div class="select">
+                        {{ form.grade }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class='is-size-7'>{{ form.color.label }}</h3>
+                    <div class="select">
+                        {{ form.color }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class='is-size-7'>{{ form.risk.label }}</h3>
+                    <div class="select">
+                        {{ form.risk }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class='is-size-7'>{{ form.intensity.label }}</h3>
+                    <div class="select">
+                        {{ form.intensity }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class='is-size-7'>{{ form.complexity.label }}</h3>
+                    <div class="select">
+                        {{ form.complexity }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button">{{ form.submit(class='button is-primary') }}</button>
+    </form>
+    <br>
+    <br>
+    <h2 class='subtitle'>Here are all the problems you follow:</h2>
+    {% else %}
+    <h2 class='subtitle'>Here are all the problems:</h2>
+    {% endif %}
+    <table class=table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Setter</th>
+                <th>Grade</th>
+                <th>Color</th>
+                <th>Risk</th>
+                <th>Tntensity</th>
+                <th>Complexity</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for problem in problems %}
+             {% include '_problem.html' %}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

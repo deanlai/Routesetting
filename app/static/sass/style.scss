@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=\
+            IBM+Plex+Mono:400,400i\
+            |IBM+Plex+Sans+Condensed:400,400i\
+            |IBM+Plex+Sans:100,100i,400,400i,700,700i\
+            |IBM+Plex+Serif:400,400i');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+//Routesetting colors
+$charcoal: #333333;
+$burnt: #cc3300;
+$almostwhite: #FDFDFD;
+$forest: #065535;
+
+// Update Bulma's global variables
+$family-sans-serif: "Alegreya Sans", sans-serif;
+$family-serif: "Alegreya", serif;
+$grey-dark: $charcoal;
+$grey-light: $beige-light;
+$primary: $burnt;
+$link: $burnt;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$notification-background-color: $almostwhite;
+
+// Import only what you need from Bulma
+@import "../bulma/sass/utilities/_all.sass";
+@import "../bulma/sass/base/_all.sass";
+@import "../bulma/sass/elements/_all.sass";
+@import "../bulma/sass/components/_all.sass";
+@import "../bulma/sass/layout/_all.sass";
+@import "../bulma/sass/grid/_all.sass";
+
+//font stuff
+$family-monospace: "Inconsolata", monospace;
+.is-family-monospace{
+    font-family: $family-monospace
+}
+.is-family-serif{
+    font-family: $family-serif
+}
+.title, .subtitle{
+    font-family: $family-monospace
+}
+
+#crane{
+    height: 20em;
+    width: 100%;
+    align-content: center;
+}
+iframe {
+    padding-top: 1.5em;
+}
+#tidbits *{
+    text-align: center;
+}
+
+//spacers
+.small-spacer {
+    padding-bottom: 1em
+}
